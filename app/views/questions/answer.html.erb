@@ -1,0 +1,12 @@
+<h3><%=params[:question]%></h3><p>– You, just now</p>
+<h3>
+<%=if params[:question] == "I am going to work"
+    "Great!"
+  elsif [:question[-1]] == "?"
+    "Silly question, get dressed and go to work!"
+  else
+    "I don't care, get dressed and go to work!"
+  end%>
+</h3><p>– The Coach</p>
+
+<p><%=link_to "Ask the coach another question", ask_path%></p>
